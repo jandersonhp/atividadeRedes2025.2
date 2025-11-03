@@ -1,0 +1,235 @@
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .course-header {
+            background: linear-gradient(135deg, #1a5276, #2c3e50);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .course-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .course-info {
+            text-align: left;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .course-info h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            border-bottom: none;
+        }
+        
+        .course-info p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .student-names {
+            text-align: right;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .student-names h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            border-bottom: none;
+        }
+        
+        .student-names p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            margin: 1rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .budget-table {
+            overflow-x: auto;
+        }
+        
+        .budget-table table {
+            min-width: 800px;
+        }
+        
+        .total-row {
+            font-weight: bold;
+            background-color: rgba(39, 174, 96, 0.1);
+        }
+        
+        .best-price {
+            background-color: rgba(39, 174, 96, 0.2);
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .diagram-placeholder {
+            background-color: var(--light-color);
+            border: 2px dashed var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--dark-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 1.5rem;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .course-header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .course-info, .student-names {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }

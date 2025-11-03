@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Projeto de Rede LAN - Escritório de Contabilidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho do Curso -->
+    <div class="course-header">
+        <div class="container">
+            <div class="course-info">
+                <h2>Análise e Desenvolvimento de Sistemas - Matinal</h2>
+                <p><strong>Disciplina:</strong> Redes de Computadores</p>
+                <p><strong>Professor:</strong> Fabiano Lopes</p>
+                <p><strong>Data:</strong> Nov/2025</p>
+            </div>
+            <div class="student-names">
+                <h3>Integrantes do Grupo:</h3>
+                <p>Janderson Duarte, Caio Dias, Gabriel Oliveira, Yago Reis e Tomás</p>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1>Projeto de Rede LAN</h1>
+            <p>Escritório de Contabilidade - Dimensionamento e Orçamento</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>Este projeto visa dimensionar uma rede local (LAN) para atender um escritório de contabilidade, respeitando as premissas de infraestrutura, conectividade e desempenho necessárias para o funcionamento eficiente das operações.</p>
+            
+            <div class="highlight">
+                <p><strong>Dimensões do Escritório:</strong> 8m (Largura) × 10m (Comprimento) × 3,5m (Altura)</p>
+                <p><strong>Total de Pontos de Rede:</strong> 15 (14 computadores + 1 Access Point)</p>
+                <p><strong>Banda Larga Mínima:</strong> 500 Mb/s</p>
+            </div>
+        </section>
+        
+        <section id="requisitos">
+            <h2>Requisitos do Escritório</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisito</th>
+                        <th>Detalhamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dimensões do Escritório</td>
+                        <td>8 metros (Largura) × 10 metros (Comprimento) com pé direito de 3,5 metros</td>
+                    </tr>
+                    <tr>
+                        <td>Pontos de Rede Cabeada</td>
+                        <td>14 pontos para computadores, utilizando Cabo Categoria 6 (Cat 6)</td>
+                    </tr>
+                    <tr>
+                        <td>Ponto de Acesso Sem Fio</td>
+                        <td>1 Access Point (AP) para suportar, no mínimo, 20 dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Computadores</td>
+                        <td>14 unidades com Windows, Office e navegadores. Necessidade de rodar softwares de contabilidade online</td>
+                    </tr>
+                    <tr>
+                        <td>Banda Larga</td>
+                        <td>Mínimo de 500 Mb/s</td>
+                    </tr>
+                    <tr>
+                        <td>Impressoras</td>
+                        <td>2 impressoras a laser (1 monocromática e 1 colorida)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="componentes">
+            <h2>Componentes de Hardware e Software</h2>
+            
+            <h3>Hardware - Computadores</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Especificação Detalhada</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desktop (Ponto de Usuário)</td>
+                        <td>Processador: Intel Core i5 (12ª Gen. ou sup.) / AMD Ryzen 5. Memória RAM: 16 GB DDR4. Armazenamento: SSD NVMe de 512 GB. Placa de Rede: Gigabit Ethernet (10/100/1000 Mbps). Monitor: LED 23".</td>
+                        <td>14</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Hardware - Impressoras</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Especificação Detalhada</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Impressora Laser Monocromática (P/B)</td>
+                        <td>Tecnologia Laser, velocidade ≥ 30 ppm, com conexão de rede (cabeada ou Wi-Fi)</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Impressora Laser Colorida</td>
+                        <td>Tecnologia Laser, velocidade ≥ 20 ppm, com conexão de rede (cabeada ou Wi-Fi)</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Hardware - Rede</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Especificação Detalhada</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Roteador</td>
+                        <td>Suporte a banda ≥ 500 Mb/s (Fornecido pela operadora)</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Switch de Rede</td>
+                        <td>16 Portas Gigabit Ethernet (10/100/1000 Mbps), Desempilhado (Unmanaged/Smart Managed)</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point (AP) Corporativo</td>
+                        <td>Suporte ≥ 20 dispositivos, tecnologia Wi-Fi 5 (802.11ac) ou Wi-Fi 6 (802.11ax), Dual Band</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Cabeamento de Rede</td>
+                        <td>Bobina de Cabo Cat 6 U/UTP (100% Cobre, Homologado Anatel)</td>
+                        <td>1 (305m)</td>
+                    </tr>
+                    <tr>
+                        <td>Conectores RJ45</td>
+                        <td>Macho (Plug) e Fêmea (Keystone) Categoria 6</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Patch Panel</td>
+                        <td>24 portas Cat 6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Rack de Parede</td>
+                        <td>8U ou 10U de profundidade adequada</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Software</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Especificação Detalhada</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema Operacional</td>
+                        <td>Windows 11 Pro (Licença por volume ou OEM)</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Pacote de Produtividade</td>
+                        <td>Microsoft Office Home & Business 2021 (Licença vitalícia)</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Software de Contabilidade</td>
+                        <td>Acesso via navegador/web</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="cabeamento">
+            <h2>Dimensionamento de Cabo e Conectores</h2>
+            
+            <h3>Metragem de Cabo Cat 6</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ponto de Destino</th>
+                        <th>Descrição</th>
+                        <th>Metragem por Cabo (m)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ponto 1 (C1) ao Ponto 14 (C14)</td>
+                        <td>Computadores</td>
+                        <td>9.5m a 31.0m</td>
+                    </tr>
+                    <tr>
+                        <td>Ponto 15 (AP)</td>
+                        <td>Access Point (Teto Central)</td>
+                        <td>12.0m</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2">TOTAL</td>
+                        <td>259.0m</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight">
+                <p><strong>Conclusão da Metragem:</strong> O total de cabo Cat 6 necessário é de <strong>259.0 metros</strong>. Para a compra, será adquirida uma bobina padrão de <strong>305 metros</strong>.</p>
+            </div>
+            
+            <h3>Número de Conectores RJ45</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantidade de Pontos</th>
+                        <th>Conectores por Ponto</th>
+                        <th>Total de Conectores Necessários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computadores</td>
+                        <td>14</td>
+                        <td>2 (Patch Panel + Tomada)</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point</td>
+                        <td>1</td>
+                        <td>2 (Patch Panel + Ponto Teto)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3">TOTAL</td>
+                        <td>30 Conectores RJ45 (Keystone/Plug)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="orcamentos">
+            <h2>Análise de Orçamentos</h2>
+            
+            <div class="budget-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qtd</th>
+                            <th>Orçamento 1 (R$)</th>
+                            <th>Orçamento 2 (R$)</th>
+                            <th>Orçamento 3 (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subtotal Computadores (14 un)</td>
+                            <td>14</td>
+                            <td>49.000,00</td>
+                            <td class="best-price">45.500,00</td>
+                            <td>47.600,00</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal Impressoras (2 un)</td>
+                            <td>2</td>
+                            <td>4.900,00</td>
+                            <td class="best-price">4.700,00</td>
+                            <td>4.700,00</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal Rede (Switch, AP, Cabo, etc.)</td>
+                            <td>Vários</td>
+                            <td>2.670,00</td>
+                            <td class="best-price">2.275,00</td>
+                            <td>2.774,00</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal Software (14 licenças)</td>
+                            <td>14</td>
+                            <td>37.800,00</td>
+                            <td class="best-price">36.400,00</td>
+                            <td>39.200,00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>TOTAL GERAL (R$)</td>
+                            <td></td>
+                            <td>94.370,00</td>
+                            <td class="best-price">88.875,00</td>
+                            <td>94.274,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="highlight">
+                <p>O <strong>Orçamento 2</strong> apresentou o menor valor total e foi utilizado como referência para a composição final do investimento.</p>
+            </div>
+        </section>
+        
+        <section id="investimento">
+            <h2>Investimento Total</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Especificação</th>
+                        <th>Qtd</th>
+                        <th>Custo Unitário (R$)</th>
+                        <th>Custo Total (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hardware - Computadores</td>
+                        <td>Desktop i5/16GB/512GB NVMe/Monitor 23"</td>
+                        <td>14</td>
+                        <td>3.250,00</td>
+                        <td>45.500,00</td>
+                    </tr>
+                    <tr>
+                        <td>Impressora Laser P/B</td>
+                        <td>Modelo de menor custo (O2)</td>
+                        <td>1</td>
+                        <td>950,00</td>
+                        <td>950,00</td>
+                    </tr>
+                    <tr>
+                        <td>Impressora Laser Colorida</td>
+                        <td>Modelo de menor custo (O3)</td>
+                        <td>1</td>
+                        <td>3.500,00</td>
+                        <td>3.500,00</td>
+                    </tr>
+                    <tr>
+                        <td>Switch 16 Portas Gigabit</td>
+                        <td>Unmanaged (O2)</td>
+                        <td>1</td>
+                        <td>480,00</td>
+                        <td>480,00</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point Wi-Fi 6</td>
+                        <td>Corporativo (O2)</td>
+                        <td>1</td>
+                        <td>700,00</td>
+                        <td>700,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cabo Cat 6 U/UTP (305m)</td>
+                        <td>Bobina (O2)</td>
+                        <td>1</td>
+                        <td>480,00</td>
+                        <td>480,00</td>
+                    </tr>
+                    <tr>
+                        <td>Conectores RJ45/Keystone Cat 6</td>
+                        <td>Unidade (O2)</td>
+                        <td>30</td>
+                        <td>4,50</td>
+                        <td>135,00</td>
+                    </tr>
+                    <tr>
+                        <td>Patch Panel 24 portas Cat 6</td>
+                        <td>(O2)</td>
+                        <td>1</td>
+                        <td>220,00</td>
+                        <td>220,00</td>
+                    </tr>
+                    <tr>
+                        <td>Rack de Parede 8U</td>
+                        <td>(O2)</td>
+                        <td>1</td>
+                        <td>350,00</td>
+                        <td>350,00</td>
+                    </tr>
+                    <tr>
+                        <td>Componentes de Rede Diversos</td>
+                        <td>(Tomadas, Patch Cords, etc.)</td>
+                        <td>Vários</td>
+                        <td>*Incluso no Custo Total*</td>
+                        <td>462,00</td>
+                    </tr>
+                    <tr>
+                        <td>Software - Windows 11 Pro</td>
+                        <td>Licença</td>
+                        <td>14</td>
+                        <td>750,00</td>
+                        <td>10.500,00</td>
+                    </tr>
+                    <tr>
+                        <td>Software - Office Home & Business 2021</td>
+                        <td>Licença</td>
+                        <td>14</td>
+                        <td>1.850,00</td>
+                        <td>25.900,00</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="4">Subtotal Hardware e Software</td>
+                        <td>89.177,00</td>
+                    </tr>
+                    <tr>
+                        <td>Serviços</td>
+                        <td>Instalação, Configuração e Infraestrutura (Estimativa de 15%)</td>
+                        <td></td>
+                        <td></td>
+                        <td>13.376,55</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="4">TOTAL GERAL DO PROJETO</td>
+                        <td>102.553,55</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="planta-fisica">
+            <h2>Planta Física do Escritório</h2>
+            <div class="diagram-placeholder">
+                <p><img src="./assets/plantaescrit.jpg"></p>
+                <p>A planta física demonstra o layout do escritório, a disposição dos 14 computadores (C1 a C14), as 2 impressoras, o Access Point (AP) e a localização do Rack/Switch.</p>
+            </div>
+        </section>
+        
+        <section id="planta-logica">
+            <h2>Planta Lógica da Rede</h2>
+            
+            <h3>Componentes e Conectividade</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Função na Rede</th>
+                        <th>Conectividade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Roteador da Operadora</td>
+                        <td>Gateway (Banda Larga)</td>
+                        <td>Conecta-se ao Switch</td>
+                    </tr>
+                    <tr>
+                        <td>Switch Gigabit (16P)</td>
+                        <td>Distribuição e comutação (Camada 2)</td>
+                        <td>Conecta o Roteador, o Patch Panel, as Impressoras</td>
+                    </tr>
+                    <tr>
+                        <td>Patch Panel (24P)</td>
+                        <td>Organização e terminação do cabeamento horizontal</td>
+                        <td>Conecta-se ao Switch via Patch Cords</td>
+                    </tr>
+                    <tr>
+                        <td>14 Pontos (C1-C14)</td>
+                        <td>Acesso de Usuários (LAN)</td>
+                        <td>Cabos Cat 6 → Patch Panel → Switch</td>
+                    </tr>
+                    <tr>
+                        <td>1 Ponto (AP)</td>
+                        <td>Acesso de Usuários (WLAN)</td>
+                        <td>Cabo Cat 6 → Patch Panel → Switch</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Plano de Endereçamento</h3>
+            <div class="highlight">
+                <p><strong>Rede:</strong> 192.168.1.0/24</p>
+                <p><strong>Máscara:</strong> 255.255.255.0</p>
+                <p><strong>Gateway:</strong> 192.168.1.1 (Roteador/Switch L3)</p>
+            </div>
+            
+            <h3>Diagrama de Conexão Lógica</h3>
+            <div class="diagram-placeholder">
+                <p><img src="./assets/plantalog.jpg"></p>
+                <p>Internet (500Mb/s) → Roteador (Gateway) → Switch Gigabit</p>
+                <p>Switch Gigabit → 14 Computadores + 1 Access Point + 2 Impressoras</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Projeto de Redes de Computadores – 221025</p>
+            <p>Escritório de Contabilidade - Dimensionamento de Rede LAN</p>
+        </div>
+    </footer>
+</body>
+</html>
